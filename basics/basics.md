@@ -5,29 +5,76 @@ In many cases, we declare types with ```:TypeAnnotation```, for example, to decl
 ```typescript
 let myNumber: number = 1;
 ```
+Some other ways of declaring types will be introduced in this file later. 
 ###  Primitive Types
 TypeScript is a superset of JavaSript, thus they share some primitive types: 
-- Number
-- String
-- Boolean
+- ``` Number```
+- ```String```
+- ```Boolean```
 
-Two primitive types are excluded: 
-- Symbol
-- Bigint
+Two primitive types of JS are excluded: 
+- ```Symbol```
+- ```Bigint```
 
 ### Enumerates
+Suppose we have a simulation of the Earth, and we need to declare variables for the four seasons. We can declare the seasons like this: 
+```javascript
+let seasons ={
+    spring:'SPRING',
+    summer:'SUMMER',
+    fall:'FALL',
+    winter:'WINTER';
+} 
+function seasonSelector(seasons){
+    do select(seasons);
+}
+```
+But it has several problems, first, I can change what is in the ```seasons``` object, and the function might throw an error, or select something that is unexpected. In this case, we need some additional checks to make sure this snippet runs as we expect. Now we have TS, and it provides a type: ```enum``` for this situation, where you wish to have a set of finite possible values belong to a group. There are two ways to define an ```enum```: 
+- By number: 
+```typescript
+enum Seasons{
+    Spring,         //by default, the numeric value for Spring is 0, but you can specify its value, like: 
+    //Spring = 1,   //In this case, Spring starts with 1           
+    Summer,         //=1 by default, 2 if Spring = 1
+    Fall,           //=2 by default, 3 if Spring = 1
+    Winter          //=3 by default, 4 if Spring = 1
+}
+```
+Suppose we are using the default setting, we can retrieve the position of the season: 
+```typescript
+let springNum: number = Seasons.Spring
+console.log(springNum) // 0
+```
+Or we can provide its position number and get a string: 
+```typescript
+let springSeason: string = Seasons[0]
+console.log(springSeason) //'Spring'
+```
+
+- By String
+
+In this case, providing numerical numbers might not be very helpful. We probably want to retrieve from ```Seasons.Spring``` and get a string of ```'SPRING'```. In this case, we assign string values on the members of Seasons enumrates. Note that when using string, we need to declare every values explicitly.
+
+```typescript
+enum Seasons{
+    Spring = 'SPRING',      
+    Summer = 'SUMMER',    
+    Fall = 'FALL',        
+    Winter = 'WINTER'        
+}
+let springSeason: string = Seasons.Spring
+console.log(springSeason) // 'SPRING'
+```
 
 ### Array and Tuple
-
-### Interface
-
-### Generic Types
 ### Special Types
 TS provides additional types: 
-- Any
-- Null (not frequently used)
-- Undefined (not frequently used)
-- Void
+- ```Any```
+
+
+- ```Void```
+- ```Null``` (not frequently used)
+- ```Undefined``` (not frequently used)
 
 ## Type Variant
 

@@ -6,7 +6,8 @@ enum myStuff{
     Raspi,
     Tea
 }
-let mySingleStuff: myStuff = myStuff.Pen;
+let mySingleStuff: string = myStuff[2];
+console.log(mySingleStuff)
 //we can also specify the start number, like:
 enum myStuff2{
     Pen = 3,
@@ -31,7 +32,7 @@ type myself = {
 //Type Aliases
 
 
-//Function
+// //Function
 
 
 //Generic
