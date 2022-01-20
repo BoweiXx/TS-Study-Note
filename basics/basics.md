@@ -3,7 +3,7 @@
 ## Types 
 In many cases, we declare types with ```:TypeAnnotation```, for example, to declare variable ```myNumber``` with number type and value of 1, we can say: 
 ```typescript
-type myNumber: number = 1;
+let myNumber: number = 1;
 ```
 ###  Primitive Types
 TypeScript is a superset of JavaSript, thus they share some primitive types: 
