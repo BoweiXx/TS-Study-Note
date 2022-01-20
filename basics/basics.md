@@ -1,6 +1,6 @@
 # TS Basics
 
-## Types 
+## Basic Types 
 In many cases, we declare types with ```:TypeAnnotation```, for example, to declare variable ```myNumber``` with number type and value of 1, we can say: 
 ```typescript
 let myNumber: number = 1;
@@ -53,7 +53,7 @@ console.log(springSeason) //'Spring'
 
 - By String
 
-In this case, providing numerical numbers might not be very helpful. We probably want to retrieve from ```Seasons.Spring``` and get a string of ```'SPRING'```. In this case, we assign string values on the members of Seasons enumrates. Note that when using string, we need to declare every values explicitly.
+In our example, providing numerical values  might not be very helpful. We probably want to retrieve from ```Seasons.Spring``` and get a string of ```'SPRING'```. In this case, we can assign string values on the members of ```Seasons```. Note that when using string, we need to declare every values explicitly.
 
 ```typescript
 enum Seasons{
@@ -65,8 +65,27 @@ enum Seasons{
 let springSeason: string = Seasons.Spring
 console.log(springSeason) // 'SPRING'
 ```
-
 ### Array and Tuple
+
+- Array
+
+We can declare a Array type with ```[]``` suffix. For example, if we want to declare a array of booleans, we can say: 
+```typescript
+let boolArray: boolean[] 
+boolArray = [true, false] //ok
+boolArray = ['true', false] //type error
+```
+
+- Tuple
+
+TypeScript also support tuple. To declare a tuple, follow the format: 
+```typescript
+let myTuple: [number, string, boolean]
+myTuple = [1, 'hello', true] //ok
+myTuple = [2, 3, false] //error
+myTuple = [1. 'hello'] //error, note that the length should also match
+```
+
 ### Special Types
 TS provides additional types: 
 - ```Any```
@@ -75,8 +94,6 @@ TS provides additional types:
 - ```Void```
 - ```Null``` (not frequently used)
 - ```Undefined``` (not frequently used)
-
-## Type Variant
 
 ## Complier Options
 Compiler options in ```tsconfig.json``` provides a way to configure your transpiler, and for those who are learning, I think it is the place where you can know what can we do with TS thoroughly. Here is a list of possible options for compiler, we do not need to recite this, but reading through this provides a clear scope of what TS can do: 
