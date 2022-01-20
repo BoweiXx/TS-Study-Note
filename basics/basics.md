@@ -29,7 +29,7 @@ function seasonSelector(seasons){
     do select(seasons);
 }
 ```
-But it has several problems, first, I can change what is in the ```seasons``` object, and the function might throw an error, or select something that is unexpected. In this case, we need some additional checks to make sure this snippet runs as we expect. Now we have TS, and it provides a type: ```enum``` for this situation, where you wish to have a set of finite possible values belong to a group. There are two ways to define an ```enum```: 
+In this case, I can change what is in the ```seasons``` object, and the function might throw an error, or select something that is unexpected. In this case, we need some additional checks to make sure this snippet runs as we expect. Now we have TS, and it provides a type: ```enum``` for this situation, where you wish to have a set of finite possible values belong to a group. There are two ways to define an ```enum```: 
 - By number: 
 ```typescript
 enum Seasons{
