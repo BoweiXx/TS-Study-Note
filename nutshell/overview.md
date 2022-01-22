@@ -1,7 +1,7 @@
 # TS in a Nutshell
 
 ## Why learning TS? 
-For me, working on a project which has a lot of variables passing around is confusing. Sometimes I just forgot what is in the object or the array, and I need to spend time revisit my code. When working others, this problem gets worse. You might find this kind of notation is not very intuitive:
+For me, working on a project which has a lot of variables passing around is confusing and potentially will cause bugs that are hard to fix. Sometimes I just forgot what is in the object or the array, and I need to spend time revisit my code, and to refactor the entire module. When working with others, this problem gets worse. You might find this kind of notation is not very intuitive:
 ```JavaScript
 //find desired elements in an object and return them in an array
 function extractSomeElement(elements){
@@ -9,10 +9,10 @@ function extractSomeElement(elements){
     return element;
 }
 ```
-By this you have no idea what is in the elements variable, so you have to go back and look it up. Also, if you pass in some unexpected values during runtime, without proper checking, the code will either has unexpected behavior, or throw errors. It will be nice if there is a pre-defined structure, that you can use it as a reference not only for readibility, but also error checking, and therefore we use TS.
+By this you have no idea what is in the elements variable, so you have to go back and look it up. Also, you do not know what does ```extract()``` do, or if it is a function even. If you pass in some unexpected values during runtime, without proper checking, the code will either has unexpected behavior, or throw errors. It will be nice if there is a pre-defined structure, that you can use it as a reference not only for readibility, but also error checking, and therefore we use TS. By using TS, we can spot potential errors before the code is running.
 
 ## What is TS? 
-To the best of my knowledge, TS is analogues to JavaScript with type checking. You can write the code in TS with all the features of JS, and use transpiler to convert your code to JS when you are done. 
+To the best of my knowledge, TS is analogues to JavaScript but with type checking. You can write the code in TS with all the features of JS, and use transpiler to convert your code to JS when you are done. 
 
 ## How to Use TS? 
 
@@ -55,4 +55,4 @@ Linux:
 $ tsc your_file.ts && node your_file.js
 ```
 
-Or, you can use [ts-node](https://www.npmjs.com/package/ts-node)
+Or, you can use [ts-node](https://www.npmjs.com/package/ts-node), which is a module allows you to do trasnpilation and execution in a simple command line.
