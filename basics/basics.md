@@ -138,7 +138,7 @@ TS provides additional types:
 
 The situation of using ```any```, as far as I understand it, is where static type check is not applicable. Say, if we are using a 3rd party service, or making an HTTP request, and they are using ```any``` for the result, or I have no idea what the result would be. But there is a better type ```unknown``` for it, and we will introduce it later.
 
-Another case I can think of is when our function can nicely do its work to all the types. In this case, I do not think any wrong with using any. 
+Another case I can think of is when our function can nicely do its work to all the types. In this case, I do not think any wrong with using ```any```. 
 
 But, I think it is a good approach to avoid abuse of ```any```, like we avoid using ```eval()``` and ```exec()```; for they adding uncertainty to our code.
 
