@@ -1,1 +1,16 @@
-# Advanced Types
+# Advanced Types 
+
+## Objects
+
+
+
+## Class
+
+
+
+
+## Interface
+
+
+## Generic Type
+
