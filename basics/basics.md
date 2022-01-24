@@ -149,4 +149,5 @@ Sometimes, your function is not going to return any value, in this case, you can
 - ```null``` (not frequently used)
 - ```undefined``` (not frequently used)
 
+
 To continue reading, please jump to the [Compiler Options](../tsconfig/tsconfig.md), or you can jump to [Advanced Types](../advanced_Type/advanced_type.md)
