@@ -39,11 +39,6 @@ function gibber(param: string){
 cbTaker(gibber) //'blah'
 ```
 
-Also, there is a more general way of defining a function type. Suppose you are writing a group of functions that does arithmetic operations, we know that, we should take at least two parameters with type ```number```, and return a ```number``` type value. 
-```typescript
-//suppose we only take 2 parameters
-
-```
 
 
 
