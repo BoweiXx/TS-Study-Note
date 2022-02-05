@@ -91,6 +91,7 @@ cbTaker(gibber) //'blah'
 ## Generic Type
 
 
+
 ## Type Assertion
 
 To Continue Reading, please jump to [Class, Interface and More on Function](../advanced_type2/advanced_type2.md)
