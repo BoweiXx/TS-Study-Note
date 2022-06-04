@@ -18,6 +18,7 @@ type myNum = number
 ```
 After learning the types we are about to introduce, we could use the aliases for those types to make our code more readible. 
 
+
 ## Object Types
 
 In JavaScript, a common approach to organize data and pass it around is by using ```object```. In TypeScript, we use ```object``` type to define a desired structure of an object and do type checks. Here is an example with type alias:
@@ -43,7 +44,7 @@ function printWeather(weather: {
 ```
 
 ## Union Types
-There are chances that your variable can be assigned with multiple types, we use ```|``` to represent the union type. If you are familiar with set, think of it as ```∪```. Here is an example of usage: 
+There are chances that your variable can be assigned with multiple types, We use ```|``` to represent the union type. If you are familiar with set, think of it as ```∪```. Here is an example of usage: 
 ```typescript
 let myUnionType: string | number
 myUnionType = 1
@@ -90,7 +91,28 @@ cbTaker(gibber) //'blah'
 
 ## Generic Type
 
-
+Generic type provides a way to do generic programming. For example, if we want to write an ```echo``` function, basically a function returns whatever the parameters it recieves, the easiest way of doing so is to use ```any``` type: 
+```typescript
+function echo(arg: any): any{
+    return arg
+}
+```
+But here, we notice that the parameter's type should be the same as the function's return value type. Now it is time to introduce ```Type```, which is a variable works on type instead of values: 
+```typescript
+function echo<Type>(arg: Type):Type{
+    return arg
+}
+```
+Note here ```<Type>``` can be any name, for example, in React(although it is using flow instead of ts), they made an agreement on: 
+```
+state: <S>,
+props: <P>,
+...
+```
+In this case, we can use this to call the function without having any problems, note here we do not have to explicitly declare the type for the echo function anymore, because the tranpiler will set the function's type base on the parameter's type: 
+```typescript
+let myString:string = echo("myString") // this is cool
+```
 
 ## Type Assertion
 
